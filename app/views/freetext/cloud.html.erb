@@ -1,0 +1,23 @@
+
+<div id="cloud"><p>
+	<% @grouped_results.each do |key, value| %>
+
+		<% min_font_size = 2 %>
+		<% max_font_size = 15 %>
+
+		<% min_opacity = 0.5 %>
+		<% max_opacity = 1.0 %>
+
+
+		<% size_top_half = (value - @lowest_result) * (max_font_size - min_font_size) %>
+		<% size_bottom_half = (@highest_result - @lowest_result) %>
+		<% size_normalized_value = (min_font_size + (size_top_half/size_bottom_half)) %>
+
+		<% opacity_top_half = (value - @lowest_result) * (max_opacity - min_opacity) %>
+		<% opacity_bottom_half = (@highest_result - @lowest_result) %>
+		<% opacity_normalized_value = (min_opacity + (opacity_top_half/opacity_bottom_half)) %>
+
+		<span style="font-size: <%= size_normalized_value %>vw; opacity: <%= opacity_normalized_value %>"><%= key %></span>
+	<% end %>
+</p></div>
+
