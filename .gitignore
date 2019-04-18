@@ -15,5 +15,5 @@
 /log/*
 !/log/.keep
 /tmp
-secrets.yml
 .DS_Store
+.env
