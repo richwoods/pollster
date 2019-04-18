@@ -11,6 +11,9 @@
 
 		<% size_top_half = (value - @lowest_result) * (max_font_size - min_font_size) %>
 		<% size_bottom_half = (@highest_result - @lowest_result) %>
+		<% if size_bottom_half == 0 %>
+			<% size_bottom_half = 1 %>
+		<% end %>
 		<% size_normalized_value = (min_font_size + (size_top_half/size_bottom_half)) %>
 
 		<% opacity_top_half = (value - @lowest_result) * (max_opacity - min_opacity) %>
