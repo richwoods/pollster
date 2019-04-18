@@ -182,7 +182,7 @@ DEPENDENCIES
   jbuilder (~> 2.0)
   jquery-rails
   polleverywhere
-  rails (= 4.2.10)
+  rails (~> 4.2.10)
   rails_12factor
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
@@ -190,6 +190,9 @@ DEPENDENCIES
   turbolinks
   uglifier (>= 1.3.0)
   web-console (~> 2.0)
+
+RUBY VERSION
+   ruby 2.4.2p198
 
 BUNDLED WITH
    1.16.1
